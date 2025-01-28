@@ -409,3 +409,120 @@ With this, we have successfully completed our Javascript course on youtube. To g
 Supposed to cover LMS videos today but due to jquery session and soft skills session, I have shifted those task to tomorrow.
 
 We'll cover the rest of the videos and start the Calculator task from tomorrow.
+
+##### Dt. 28 Jan, 2025.
+
+Covered LMS videos today and learnt about new topics.
+
+For reference check them out - [JavaScript HTML DOM](https://www.youtube.com/watch?v=y17RuWkWdn8) | [JavaScript Event Listener](https://www.youtube.com/watch?v=XF1_MlZ5l6M) | [Javascript this keyword](https://www.youtube.com/watch?v=gvicrj31JOM)
+
+These topics were included in Event Handling video -
+
+## Event Propagation
+
+- Event propagation determines the order in which event listeners are triggered on elements.
+- Two main phases:
+  - Capturing phase: The event moves from the root to the target element.
+  - Bubbling phase: The event moves from the target element back to the root.
+
+## Bubbling
+
+- In the bubbling phase, events "bubble up" from the target element to its ancestors.
+- Default phase for event listeners unless specified otherwise.
+- Example:
+  ```javascript
+  element.addEventListener("click", function () {
+    console.log("Bubbling phase");
+  });
+  ```
+
+## Capturing
+
+- In the capturing phase, events are captured as they move from the root to the target element.
+- Use the third parameter as true to activate capturing:
+  ```javascript
+  element.addEventListener(
+    "click",
+    function () {
+      console.log("Capturing phase");
+    },
+    true
+  );
+  ```
+
+## Event Delegation
+
+- Technique for handling events efficiently by attaching a single listener to a parent element.
+- Allows handling events for current and future child elements.
+- Example:
+  ```javascript
+  document.getElementById("parent").addEventListener("click", function (event) {
+    if (event.target.tagName === "BUTTON") {
+      console.log("Button clicked:", event.target.textContent);
+    }
+  });
+  ```
+
+## Once
+
+- Event listeners can be triggered only once using the once option:
+  ```javascript
+  element.addEventListener(
+    "click",
+    function () {
+      console.log("This will only run once");
+    },
+    { once: true }
+  );
+  ```
+
+## Remove Event Listener
+
+- Use `removeEventListener` to detach an event listener.
+- Requires the same reference to the function used in `addEventListener`.
+- Example:
+  ```javascript
+  function handleClick() {
+    console.log("Clicked");
+  }
+  element.addEventListener("click", handleClick);
+  element.removeEventListener("click", handleClick);
+  ```
+
+## this Keyword
+
+- Refers to the current execution context.
+- Behavior varies depending on the context:
+  - In a global context, `this` refers to the global object (e.g., `window` in browsers).
+  - In an object method, `this` refers to the object that owns the method.
+  - In an event listener, `this` refers to the element that received the event.
+- Example:
+  ```javascript
+  const obj = {
+    name: "JavaScript",
+    greet() {
+      console.log(this.name);
+    },
+  };
+  obj.greet(); // Output: JavaScript
+  ```
+- Arrow functions do not have their own `this` and inherit it from the surrounding lexical scope.
+  ```javascript
+  const obj = {
+    name: "JavaScript",
+    greet: () => {
+      console.log(this.name);
+    },
+  };
+  obj.greet(); // Output: undefined
+  ```
+
+## LMS JavaScript Course
+
+After understanding the basic concepts of JavaScript, it is time to put my skills to test.
+
+I am starting the calculator task on LMS. Good luck to me!
+
+Okay, so I have completed the structure, design and basic functionality of my calculator. You can track my progress here - [Calculator Task](https://github.com/Tanishqua-Simform/Calculator-JS)
+
+I will cover some more edge cases tomorrow.
