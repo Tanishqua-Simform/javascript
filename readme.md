@@ -526,3 +526,19 @@ I am starting the calculator task on LMS. Good luck to me!
 Okay, so I have completed the structure, design and basic functionality of my calculator. You can track my progress here - [Calculator Task](https://github.com/Tanishqua-Simform/Calculator-JS)
 
 I will cover some more edge cases tomorrow.
+
+##### Dt. 29 Jan, 2025.
+
+So, I have covered as many edge cases as possible. Some of the functionalities that I have added are -
+
+- Not more than one decimal point in numeric value
+- Balance Brackets
+- Add keyboard event handlers
+- Implement Memory Functions
+- and many more...
+
+For full list of edge cases refer "Validation Covered" Section in [README](https://github.com/Tanishqua-Simform/Calculator-JS) of Calculator-JS repo.
+
+Alright, I have successfully finished working upon my Calculator Task. Whoo-Hoo!
+
+##### With this we come to an end for our JavaScript Course (Learning duration - 4 days).
